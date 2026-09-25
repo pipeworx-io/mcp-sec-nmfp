@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/sec-nmfp",
   "title": "Sec Nmfp",
   "description": "SEC Form N-MFP — money market fund portfolio holdings.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/sec-nmfp",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-sec-nmfp",

@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-sec-nmfp",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "SEC Form N-MFP — money market fund portfolio holdings.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-sec-nmfp": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "sec-nmfp"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-sec-nmfp.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/sec-nmfp",
   "pipeworx": {
-    "sourceHash": "v1-22e84cc3b6a4bda6e470504a1e139d10862addeb91f050632cdd9c1f180ce3ed",
-    "sourceCommit": "6fe8fb3e01138dfc4ebe7d5c246503aab9278d06"
+    "mode": "gateway",
+    "slug": "sec-nmfp",
+    "gatewaySlug": "sec-nmfp",
+    "sourceHash": "v1-18835e333409bdea8afcb6bff164cbe591a4e07e2a50d263f114b29fa23e049a",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }

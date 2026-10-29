@@ -1,0 +1,58 @@
+[
+  {
+    "name": "nmfp_security_holders",
+    "description": "Which US money market funds hold paper from a given issuer, from SEC Form N-MFP monthly portfolio filings — the reverse of a fund fact sheet, which makes you name the fund first. Give an issuer name (e.g. \"Federal Home Loan Bank\", \"JPMorgan\") or a CUSIP. Returns each fund holding it, the fund family, the security title, investment category and maturity dates. Answers \"which money market funds are exposed to this issuer\", \"who holds this bank's commercial paper\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "issuer": {
+          "type": "string",
+          "description": "Issuer name or fragment (\"Federal Home Loan Bank\"), or a 9-character CUSIP."
+        },
+        "period": {
+          "type": "string",
+          "description": "Reporting period id from nmfp_periods. Omit for the most recent published month."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Maximum holdings to return, 1-200 (default 50)."
+        }
+      },
+      "required": [
+        "issuer"
+      ]
+    }
+  },
+  {
+    "name": "nmfp_fund_holdings",
+    "description": "The portfolio a US money market fund reported to the SEC on Form N-MFP for one month: every security it held, with issuer, title, investment category (Treasury debt, government agency debt, repurchase agreement, financial company commercial paper, certificate of deposit) and maturity dates. Give the fund or series name (\"Fidelity Government Money Market\", \"Vanguard Federal\"). Answers \"what is this money market fund invested in\", \"how much Treasury paper does it hold\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "fund": {
+          "type": "string",
+          "description": "Fund registrant or series name, or a fragment of it."
+        },
+        "period": {
+          "type": "string",
+          "description": "Reporting period id from nmfp_periods. Omit for the most recent published month."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Maximum holdings to return, 1-500 (default 100)."
+        }
+      },
+      "required": [
+        "fund"
+      ]
+    }
+  },
+  {
+    "name": "nmfp_periods",
+    "description": "Which SEC Form N-MFP monthly reporting periods are published, newest first, with the date range each covers. Money market funds file monthly and SEC posts a period a few days after it closes. Use this to pick a period argument or to see how current the data is.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]

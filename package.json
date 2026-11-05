@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-sec-nmfp",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "SEC Form N-MFP — money market fund portfolio holdings.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "sec-nmfp",
     "gatewaySlug": "sec-nmfp",
-    "sourceHash": "v1-18835e333409bdea8afcb6bff164cbe591a4e07e2a50d263f114b29fa23e049a",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-e178305bcce37af772dd8371ac4d032ee8c3dd1db3618ee37f7e08c016f79a23",
+    "sourceCommit": "8fc802aa5e23be625ce08d97178f5676c7bc93f3"
   }
 }
